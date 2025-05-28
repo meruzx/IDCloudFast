@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDCloudFast - Hosting Premium</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">IDCloudFast</div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn-login">Login</a>
+                <a href="register.html" class="btn-register">Daftar</a>
+                <span id="userInfo" class="user-info" style="display: none;">
+                    Halo, <span id="username"></span>!
+                    <button id="logoutBtn" class="btn-logout">Logout</button>
+                </span>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Welcome Modal -->
+    <div id="welcomeModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h2 class="modal-title">Selamat Datang Di Website Kami</h2>
+            <p class="modal-text">
+                Temukan kebutuhan hosting premium dengan kualitas terbaik.
+                Nikmati pengalaman berbelanja yang tak terlupakan dengan layanan terdepan.
+            </p>
+            <button class="btn-primary" id="startShopping">Belanja Sekarang</button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section" id="home">
+            <h1 class="hero-title">IDCLOUDFAST</h1>
+            <p class="hero-subtitle">Menyediakan kebutuhan hosting premium dengan kualitas yang terbaik</p>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features-section">
+            <div class="features-container">
+                <h2 class="section-title">Mengapa Memilih IDCloudFast?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🔒</div>
+                        <h3>Pembayaran Aman</h3>
+                        <p>Transaksi dijamin aman dengan enkripsi SSL</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Pemesanan Cepat</h3>
+                        <p>Pemesanan fast karna langsung di proses</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎯</div>
+                        <h3>Kualitas Premium</h3>
+                        <p>Produk berkualitas tinggi dengan garansi resmi</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Statistics Section -->
+        <section class="stats-section">
+            <div class="stats-container">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="682">0</div>
+                    <div class="stat-label">Pelanggan Puas</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="33">0</div>
+                    <div class="stat-label">Pesanan Dikerjakan</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="24">0</div>
+                    <div class="stat-label">Kota Terjangkau</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="92">0</div>
+                    <div class="stat-label">% Kepuasan</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Coupon Section -->
+        <section class="coupon-section">
+            <div class="coupon-container">
+                <h2>🎫 Punya Kode Kupon?</h2>
+                <p>Masukkan kode kupon untuk mendapatkan diskon spesial!</p>
+                <div class="coupon-form">
+                    <input type="text" placeholder="Masukkan kode kupon" id="couponInput" maxlength="10">
+                    <button class="btn-primary" id="applyCouponBtn">Gunakan Kupon</button>
+                </div>
+                <div class="coupon-message" id="couponMessage"></div>
+                <div class="coupon-benefits">
+                    <span>💡 Kode kupon tersedia: PROMO15, FLASH2, PROMO2025, NEWBIE, FLASH10</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section class="products-section" id="products">
+            <h2 class="section-title">Panel Pterodactyl</h2>
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be loaded here -->
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials-section">
+            <h2 class="section-title">Apa Kata Pelanggan Kami</h2>
+            <div class="testimonials-container">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p>"Produk berkualitas tinggi dengan pelayanan yang sangat memuaskan. Pemesanan cepat dan
+                            terpercaya!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">👨‍💼</div>
+                            <div class="author-info">
+                                <h4>Yohanz Hosting</h4>
+                                <span>goldenaxe776@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p>"Baru kali ini beli produk hosting dengan harga terjangkau, emang reccomend banget disini
+                            pokoknya🙏"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">👩‍💻</div>
+                            <div class="author-info">
+                                <h4>Fawwaz Ulhaq</h4>
+                                <span>fadhaq12@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p>"Udah 3 kali belanja di sini, selalu puas dengan produk dan layanannya. Highly recommended!"
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">👨‍🎓</div>
+                            <div class="author-info">
+                                <h4>Ahmad Kholiq</h4>
+                                <span>radenz986@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>IDCloudFast</h3>
+                <p>Toko hosting terpercaya untuk produk premium berkualitas tinggi dengan layanan terbaik.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link">📘</a>
+                    <a href="#" class="social-link">📷</a>
+                    <a href="#" class="social-link">🐦</a>
+                    <a href="#" class="social-link">💼</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Kategori</h4>
+                <ul>
+                    <li><a href="#">Hosting</a></li>
+                    <li><a href="#">Gadgets</a></li>
+                    <li><a href="#">Accessories</a></li>
+                    <li><a href="#">Gaming</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Layanan</h4>
+                <ul>
+                    <li><a href="#">Bantuan</a></li>
+                    <li><a href="#">Garansi</a></li>
+                    <li><a href="#">Retur</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Kontak</h4>
+                <div class="contact-info">
+                    <p>📞 +62 889-8069-8613</p>
+                    <p>📧 idcloudfast15@gmail.com</p>
+                    <p>📍 Jawa Tengah, Indonesia</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 IDCloudFast. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+
+</html>
